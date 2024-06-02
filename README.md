@@ -22,7 +22,45 @@
 
  ## Article
  <img width="940" alt="image" src="https://github.com/piqoni/hn-text/assets/3144671/c4a6d098-7f79-4c81-8cd7-0506fe6aab23">
-
+ 
+# Keymaps
+<div align="center">
+    <table >
+     <tr>
+        <td><b>Key</b></td>
+        <td><b>Functionaly</b></td>
+     </tr>
+          <tr>
+       <td> Down Arrow (↓) or `j` </td>
+       <td> Down on the Frontpage Article List</td>
+     </tr>
+               <tr>
+       <td> UP Arrow (↑) or `k` </td>
+       <td> Up on the Frontpage Article List</td>
+     </tr>
+     <tr>
+       <td> Right Arrow (→) or `l` </td>
+       <td>Open Comment Page (while on frontpage) - Pressing again would open the article</td>
+     </tr>
+      <tr>
+       <td> Left Arrow (←) or `h` </td>
+       <td>Go Back</td>
+     </tr>
+      <tr>
+       <td> SPACE </td>
+       <td>Open Article on Browser (if for some reason not satisfied with text rendered version)</td>
+     </tr>
+      <tr>
+       <td> `c` </td>
+       <td>Open Comments page on Browser</td>
+     </tr>
+           <tr>
+       <td> `q` </td>
+       <td>Quit App</td>
+     </tr>
+    </table>
+    </div>
+    
 # Installation
 ## Binaries
 Download binaries for your OS at [release page](https://github.com/piqoni/hn-text/releases), and chmod +x the file to allow execution. 
