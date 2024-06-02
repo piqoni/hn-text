@@ -6,7 +6,7 @@
 
 # Motivations: 
  - Easy to use (arrow keys or hjkl navigation should be enough for the client to be fully usable)
- - Distraction Free: articles, and comments are converted to simple readble text. 
+ - Distraction Free: articles, and comments are converted to simple readable text. 
  - Fast Navigation and Responsivity
 
 # Current Features / Screenshots
