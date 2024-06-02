@@ -22,3 +22,11 @@
 
  ## Article
  <img width="940" alt="image" src="https://github.com/piqoni/hn-text/assets/3144671/c4a6d098-7f79-4c81-8cd7-0506fe6aab23">
+
+# Installation
+## Binaries
+Download binaries for your OS at [release page](https://github.com/piqoni/hn-text/releases), and chmod +x the file to allow execution. 
+
+## Using GO INSTALL
+If you use GO, you can install it directly:
+go install github.com/piqoni/hn-text@latest
