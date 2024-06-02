@@ -1,4 +1,4 @@
-module hn-text
+module github.com/piqoni/hn-text
 
 go 1.21.1
 
