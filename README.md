@@ -1,6 +1,6 @@
 <img align="right" src="https://github.com/piqoni/hn-text/actions/workflows/test.yml/badge.svg">
 <h1 align="center"> HN-text </h1>
-<p align="center"> a fast, easy-to-use and distraction-free Hacker News terminal client.</p>
+<p align="center"> A fast, easy-to-use and distraction-free Hacker News terminal client.</p>
 
 <div align="center"> <img width="500" src="https://github.com/piqoni/hn-text/assets/3144671/339fe90f-29e8-4e58-b185-dfa9ce86464d"/> </div>
 
