@@ -1,3 +1,4 @@
+<img align="right" src="https://github.com/piqoni/hn-text/actions/workflows/test.yml/badge.svg">
 <h1 align="center"> HN-text </h1>
 <p align="center"> HN-text: a fast, easy-to-use and distraction-free Hacker News terminal client.</p>
 
