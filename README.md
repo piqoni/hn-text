@@ -67,4 +67,6 @@ Download binaries for your OS at [release page](https://github.com/piqoni/hn-tex
 
 ## Using GO INSTALL
 If you use GO, you can install it directly:
+```
 go install github.com/piqoni/hn-text@latest
+```
