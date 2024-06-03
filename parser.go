@@ -28,7 +28,7 @@ func parseArticles(htmlContent string) ([]Article, error) {
 		title := s.Find("td.title > span.titleline > a").Text()
 		link, _ := s.Find("td.title > span.titleline > a").Attr("href")
 		commentText := s.Next().Find("a[href^='item']").Last().Text()
-		commentsCount, err := extractNumberFromString(commentText)
+		commentsCount, err := extractCommentsCountFromString(commentText)
 		commentsLink := s.Next().Find("a[href^='item']").Last().AttrOr("href", "")
 		if err != nil {
 			commentsCount = 0
@@ -47,15 +47,7 @@ func parseArticles(htmlContent string) ([]Article, error) {
 	return articles, nil
 }
 
-func extractCommentsCount(s *goquery.Selection) (int, error) {
-	// find the second a[href^='item'] element
-
-	commentText := s.Next().Find("a[href^='item']").Last().Text()
-
-	return extractNumberFromString(commentText)
-}
-
-func extractNumberFromString(input string) (int, error) {
+func extractCommentsCountFromString(input string) (int, error) {
 
 	input = strings.TrimSpace(input)
 	re := regexp.MustCompile(`\d+`)
