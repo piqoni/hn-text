@@ -7,6 +7,7 @@ import (
 	"os/exec"
 	"runtime"
 	"strconv"
+	"strings"
 
 	"github.com/gdamore/tcell/v2"
 	"github.com/gelembjuk/articletext"
@@ -115,6 +116,9 @@ func openComments(app *tview.Application, commentsLink string, pages *tview.Page
 }
 
 func openArticle(app *tview.Application, articleLink string, pages *tview.Pages) {
+	if !strings.HasPrefix(articleLink, "http") {
+		return // avoid trying to open relative pages like item?id=1234 like Ask HN
+	}
 	articleText := getArticleTextFromLink(articleLink)
 	displayArticle(app, pages, articleText)
 }
@@ -134,9 +138,7 @@ func displayArticle(app *tview.Application, pages *tview.Pages, text string) {
 		SetScrollable(true)
 
 	pages.AddPage("article", articleTextView, true, true)
-	if err := app.SetRoot(pages, true).Run(); err != nil {
-		log.Fatal(err)
-	}
+	app.SetRoot(pages, true)
 }
 
 func displayComments(app *tview.Application, pages *tview.Pages, text string) {
@@ -146,9 +148,7 @@ func displayComments(app *tview.Application, pages *tview.Pages, text string) {
 		SetScrollable(true)
 
 	pages.AddPage("comments", commentsTextView, true, true)
-	if err := app.SetRoot(pages, true).Run(); err != nil {
-		log.Fatal(err)
-	}
+	app.SetRoot(pages, true)
 }
 
 func openURL(url string) {
