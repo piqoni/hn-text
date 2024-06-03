@@ -1,8 +1,23 @@
 <img align="right" src="https://github.com/piqoni/hn-text/actions/workflows/test.yml/badge.svg">
 <h1 align="center"> HN-text </h1>
 <p align="center"> A fast, easy-to-use and distraction-free Hacker News terminal client.</p>
+<div align="center"><p>
+    <a href="https://github.com/piqoni/hn-text/releases/latest">
+      <img alt="Latest release" src="https://img.shields.io/github/v/release/piqoni/hn-text?style=for-the-badge&logo=starship&color=C9CBFF&logoColor=D9E0EE&labelColor=302D41" />
+    </a>
+    <a href="https://github.com/piqoni/hn-text/pulse">
+      <img alt="Last commit" src="https://img.shields.io/github/last-commit/piqoni/hn-text?style=for-the-badge&logo=starship&color=8bd5ca&logoColor=D9E0EE&labelColor=302D41"/>
+    </a>
+    <a href="https://github.com/piqoni/hn-text/blob/main/LICENSE">
+      <img alt="License" src="https://img.shields.io/github/license/piqoni/hn-text?style=for-the-badge&logo=starship&color=ee999f&logoColor=D9E0EE&labelColor=302D41" />
+    </a>
+    <a href="https://github.com/piqoni/hn-text/stargazers">
+      <img alt="Stars" src="https://img.shields.io/github/stars/piqoni/hn-text?style=for-the-badge&logo=starship&color=c69ff5&logoColor=D9E0EE&labelColor=302D41" />
+    </a>
+</div>
 
-<div align="center"> <img width="500" src="https://github.com/piqoni/hn-text/assets/3144671/339fe90f-29e8-4e58-b185-dfa9ce86464d"/> </div>
+
+<div align="center"> <img width="640" src="https://github.com/piqoni/hn-text/assets/3144671/339fe90f-29e8-4e58-b185-dfa9ce86464d"/> </div>
 
 # Motivations: 
  - Easy to use (arrow keys or hjkl navigation should be enough for the client to be fully usable)
@@ -28,7 +43,7 @@
     <table >
      <tr>
         <td><b>Key</b></td>
-        <td><b>Functionaly</b></td>
+        <td><b>Functionality</b></td>
      </tr>
           <tr>
        <td> Down Arrow (↓) or `j` </td>
