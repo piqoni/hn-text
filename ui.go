@@ -134,9 +134,7 @@ func displayArticle(app *tview.Application, pages *tview.Pages, text string) {
 		SetScrollable(true)
 
 	pages.AddPage("article", articleTextView, true, true)
-	if err := app.SetRoot(pages, true).Run(); err != nil {
-		log.Fatal(err)
-	}
+	app.SetRoot(pages, true)
 }
 
 func displayComments(app *tview.Application, pages *tview.Pages, text string) {
@@ -146,9 +144,7 @@ func displayComments(app *tview.Application, pages *tview.Pages, text string) {
 		SetScrollable(true)
 
 	pages.AddPage("comments", commentsTextView, true, true)
-	if err := app.SetRoot(pages, true).Run(); err != nil {
-		log.Fatal(err)
-	}
+	app.SetRoot(pages, true)
 }
 
 func openURL(url string) {
