@@ -7,6 +7,7 @@ import (
 	"os/exec"
 	"runtime"
 	"strconv"
+	"strings"
 
 	"github.com/gdamore/tcell/v2"
 	"github.com/gelembjuk/articletext"
@@ -115,6 +116,9 @@ func openComments(app *tview.Application, commentsLink string, pages *tview.Page
 }
 
 func openArticle(app *tview.Application, articleLink string, pages *tview.Pages) {
+	if !strings.HasPrefix(articleLink, "http") {
+		return // avoid trying to open relative pages like item?id=1234 like Ask HN
+	}
 	articleText := getArticleTextFromLink(articleLink)
 	displayArticle(app, pages, articleText)
 }
