@@ -14,11 +14,13 @@ import (
 	"github.com/rivo/tview"
 )
 
+const fireEmojiNrOfComments = 50 // TODO maybe configurable
+
 func createArticleList(articles []Article) *tview.List {
 	list := tview.NewList().ShowSecondaryText(true).SetSecondaryTextColor(tcell.ColorGray)
 	for _, article := range articles {
 		title := article.Title
-		if article.Comments > 50 { // TODO: configurable
+		if article.Comments > fireEmojiNrOfComments {
 			title = "🔥 " + title
 		}
 
@@ -38,7 +40,6 @@ func extractDomain(link string) string {
 }
 
 func createInputHandler(app *tview.Application, list *tview.List, articles []Article, pages *tview.Pages) func(event *tcell.EventKey) *tcell.EventKey {
-
 	return func(event *tcell.EventKey) *tcell.EventKey {
 		switch event.Key() {
 		case tcell.KeyCtrlC:
@@ -112,6 +113,11 @@ func openComments(app *tview.Application, commentsLink string, pages *tview.Page
 	for _, articleString := range articleStringList {
 		commentsText += articleString + "\n"
 	}
+
+	if commentsText == "" {
+		commentsText = "Story has no comments yet. Press RIGHT ARROW or letter 'l' to continue with the article."
+	}
+
 	displayComments(app, pages, commentsText)
 }
 

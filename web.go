@@ -60,7 +60,6 @@ func fetchComments(storyID string) []string {
 	}
 
 	var lines []string
-	lines = append(lines, " ")
 
 	if children, ok := comments["children"].([]interface{}); ok {
 		for _, child := range children {

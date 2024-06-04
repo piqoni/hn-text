@@ -48,7 +48,6 @@ func parseArticles(htmlContent string) ([]Article, error) {
 }
 
 func extractCommentsCountFromString(input string) (int, error) {
-
 	input = strings.TrimSpace(input)
 	re := regexp.MustCompile(`\d+`)
 	matches := re.FindString(input)
