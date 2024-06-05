@@ -7,7 +7,7 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/k3a/html2text"
+	"jaytaylor.com/html2text"
 )
 
 func fetchWebpage(url string) (string, error) {
@@ -34,7 +34,8 @@ type Comment struct {
 }
 
 func sanitize(input string) string {
-	return html2text.HTML2Text(input)
+	sanitized, _ := html2text.FromString(input)
+	return sanitized
 }
 
 func safeRequest(url string) *http.Response {

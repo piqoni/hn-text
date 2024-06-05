@@ -6,8 +6,8 @@ require (
 	github.com/PuerkitoBio/goquery v1.9.2
 	github.com/gdamore/tcell/v2 v2.7.4
 	github.com/gelembjuk/articletext v0.0.0-20231013143648-bc7a97ba132a
-	github.com/k3a/html2text v1.2.1
 	github.com/rivo/tview v0.0.0-20240524063012-037df494fb76
+	jaytaylor.com/html2text v0.0.0-20230321000545-74c2419ad056
 )
 
 require (

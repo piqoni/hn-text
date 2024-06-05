@@ -1,3 +1,5 @@
 .vscode/
 .DS_STORE
 hn-text
+bin/
+build/
