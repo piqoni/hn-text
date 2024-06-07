@@ -39,6 +39,21 @@ func extractDomain(link string) string {
 	return u.Host
 }
 
+func fetchAndGenerateList(hackerNewsURL string) (*tview.List, error) {
+	htmlContent, err := fetchWebpage(hackerNewsURL)
+	if err != nil {
+		return nil, err
+	}
+
+	articles, err := parseArticles(htmlContent)
+	if err != nil {
+		return nil, err
+	}
+
+	list := createArticleList(articles)
+	return list, nil
+}
+
 func createInputHandler(app *tview.Application, list *tview.List, articles []Article, pages *tview.Pages) func(event *tcell.EventKey) *tcell.EventKey {
 	return func(event *tcell.EventKey) *tcell.EventKey {
 		switch event.Key() {
@@ -72,7 +87,11 @@ func createInputHandler(app *tview.Application, list *tview.List, articles []Art
 			case 'c':
 				openURL(hackerNewsURL + articles[list.GetCurrentItem()].CommentsLink)
 				return nil
-
+			case 'r':
+				list.Clear()
+				refreshedList, _ := fetchAndGenerateList(hackerNewsURL)
+				pages.AddPage("homepage", refreshedList, true, false)
+				app.SetRoot(refreshedList, true).Run()
 			}
 		}
 
