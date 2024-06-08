@@ -69,14 +69,24 @@
        <td> `c` </td>
        <td>Open Comments page on Browser</td>
      </tr>
-           <tr>
+      <tr>
        <td> `q` </td>
        <td>Quit App</td>
+     </tr>
+     <tr>
+       <td> `r` </td>
+       <td>Refresh HN Frontpage</td>
      </tr>
     </table>
     </div>
     
 # Installation
+## Homebrew
+```
+brew tap piqoni/hn-text
+brew install hn-text
+```
+
 ## Binaries
 Download binaries for your OS at [release page](https://github.com/piqoni/hn-text/releases), and chmod +x the file to allow execution. 
 
@@ -84,4 +94,9 @@ Download binaries for your OS at [release page](https://github.com/piqoni/hn-tex
 If you use GO, you can install it directly:
 ```
 go install github.com/piqoni/hn-text@latest
+```
+
+Note: If you get "command not found", then likely your GOPATH/bin is not in your PATH. To add it, place the following to your ~/.bashrc or ~/.zshrc depending on your shell:
+```
+export PATH=${PATH}:`go env GOPATH`/bin
 ```
