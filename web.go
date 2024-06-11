@@ -105,7 +105,7 @@ func wrapText(text, indent string) []string {
 	var lines []string
 	var sb strings.Builder
 
-	maxWidth := 80
+	maxWidth := 60
 
 	for _, word := range words {
 		if sb.Len()+len(word)+1 > maxWidth {
