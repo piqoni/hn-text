@@ -12,11 +12,12 @@ var hackerNewsURL = "https://news.ycombinator.com/"
 func main() {
 	app := tview.NewApplication()
 	// TODO: rewrite this for other options
+	page := ""
 	if len(os.Args) > 1 && os.Args[1] == "best" {
-		hackerNewsURL = "https://news.ycombinator.com/best"
+		page = "best"
 	}
 
-	htmlContent, err := fetchWebpage(hackerNewsURL)
+	htmlContent, err := fetchWebpage(hackerNewsURL + page)
 	if err != nil {
 		log.Fatal(err)
 	}
